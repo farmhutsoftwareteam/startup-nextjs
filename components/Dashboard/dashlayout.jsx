@@ -7,7 +7,7 @@ const Dashlayout = () => {
     <div className="hidden md:flex md:w-64 md:flex-col">
         <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-white">
             <div className="flex items-center flex-shrink-0 px-4">
-                <img className="w-auto h-8" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/logo.svg" alt="" />
+                <img className="w-auto h-12" src="https://res.cloudinary.com/vambo/image/upload/v1675953341/mundalogo_2_sdm9lb.png" alt="" />
             </div>
 
             <div className="px-4 mt-8">

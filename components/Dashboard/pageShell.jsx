@@ -14,9 +14,8 @@ import { useState } from 'react';
 export default function PageShell() {
     const [selectedView, setSelectedView] = useState(1);
     return (
-        <main>
-            <Title>Dashboard</Title>
-            <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text>
+        <div>
+           
 
             <TabList defaultValue={ 1 } handleSelect={ (value) => setSelectedView(value) } marginTop="mt-6">
                 <Tab value={ 1 } text="Page 1" />
@@ -53,6 +52,6 @@ export default function PageShell() {
                     </Card>
                 </Block>
             ) }
-        </main>
+        </div>
     );
 }
