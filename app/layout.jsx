@@ -17,9 +17,9 @@ export default function RootLayout({ children }) {
 
       <body className="dark:bg-black">
         <Providers>
-          <Header />
+         
           {children}
-          <Footer />
+         
           <ScrollToTop />
         </Providers>
       </body>
