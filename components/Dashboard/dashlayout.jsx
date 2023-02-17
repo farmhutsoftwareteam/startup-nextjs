@@ -1,5 +1,14 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react';
+import Cookies from 'js-cookie';
+import {useRouter} from 'next/router';
+
+const handleLogout = async (req, res) => {
+    Cookies.remove('token');
+
+    window.location.href = '/signin';
+  }
 
 const Dashlayout = () => {        
     return (
@@ -7,7 +16,9 @@ const Dashlayout = () => {
     <div className="hidden md:flex md:w-64 md:flex-col">
         <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-white">
             <div className="flex items-center flex-shrink-0 px-4">
+                <Link href="/">
                 <img className="w-auto h-12" src="https://res.cloudinary.com/vambo/image/upload/v1675953341/mundalogo_2_sdm9lb.png" alt="" />
+                </Link>
             </div>
 
             <div className="px-4 mt-8">
@@ -108,13 +119,10 @@ const Dashlayout = () => {
                 </div>
 
                 <div className="pb-4 mt-20">
-                    <button type="button" className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-900 transition-all duration-200 rounded-lg hover:bg-gray-100">
-                        <img className="flex-shrink-0 object-cover w-6 h-6 mr-3 rounded-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/vertical-menu/2/avatar-male.png" alt="" />
-                        Jacob Jones
-                        <svg className="w-5 h-5 ml-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
-                        </svg>
-                    </button>
+                <button onClick={handleLogout} type="button" className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-900 transition-all duration-200 rounded-lg hover:bg-gray-100 bg-green-500">
+    Sign Out
+</button>
+
                 </div>
             </div>
         </div>
