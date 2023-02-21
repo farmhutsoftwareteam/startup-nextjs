@@ -31,3 +31,12 @@
     @apply opacity-100;
   }
 }
+
+.bg-primary {
+  background-color: #73BF42; /* replace with your desired shade of green */
+}
+
+.bg-secondary {
+  background-color: #F9E706; /* replace with your desired shade of green */
+}
+
