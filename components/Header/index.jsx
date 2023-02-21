@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
@@ -54,14 +54,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="https://res.cloudinary.com/vambo/image/upload/v1675953341/mundalogo_2_sdm9lb.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="https://res.cloudinary.com/vambo/image/upload/v1675953341/mundalogo_2_sdm9lb.png"
                   alt="logo"
                   width={140}
                   height={30}

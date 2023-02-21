@@ -23,7 +23,7 @@ const SignupPage = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("https://farmhutafrica.azurewebsites.net/user/login", formData);
+      const res = await axios.post("https://farmhutafrica.azurewebsites.net/user/signup", formData);
       if (res.status === 200) {
         setLoading(false);
             // user was created successfully
@@ -42,6 +42,8 @@ const SignupPage = () => {
     } else {
       setLoading(false);
       console.log("Something went wrong");
+      //display error message
+     setError("Login Failed . Please check")
     }
   } catch (error) {
     setLoading(false);
