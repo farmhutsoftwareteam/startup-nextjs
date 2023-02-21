@@ -2,6 +2,7 @@
 import React from "react";
 import { Navbar, Button, Link, Text, Card, Radio, Image } from "@nextui-org/react";
 import Cookies from "js-cookie";
+import ThemeToggler from "../Header/ThemeToggler";
 
 export default function DashNav() {
 
@@ -14,9 +15,15 @@ export default function DashNav() {
     
 
     return(
-        <Navbar isBordered  variant="sticky">
+        <Navbar disableBlur  variant="floating"
+        css={{
+            
+          
+        }}
+        >
             <Navbar.Brand>
-                <Navbar.Toggle hideIn="lg" aria-label="toggle navigation" />
+                <Navbar.Toggle hideIn="xlMax" aria-label="toggle navigation" />
+                <Image src="https://res.cloudinary.com/vambo/image/upload/v1675953341/mundalogo_2_sdm9lb.png" width="100px" height="100px" />
                     
             </Navbar.Brand>
             <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline">
@@ -24,7 +31,10 @@ export default function DashNav() {
                 <Navbar.Link href='#'>Profile</Navbar.Link>
                 <Navbar.Link href='#'>Settings</Navbar.Link>
                 <Navbar.Link href='#'>Help</Navbar.Link>
-                <Button onClick={handleLogout}  color='success' >Logout</Button>
+                <Button onClick={handleLogout} css={{
+                    background: "Green",
+                }} >Logout</Button>
+               
             </Navbar.Content>
             <Navbar.Collapse>
                 <Navbar.CollapseItem>Dashboard</Navbar.CollapseItem>
