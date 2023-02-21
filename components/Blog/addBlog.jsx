@@ -68,7 +68,7 @@ const NewBlogForm = () => {
         <Spacer y={1} />
       <div>
         <label htmlFor="tags">Tags:</label>
-        <input type="text" id="tags" value={tags} onChange={(event) => setTags(event.target.value)} />
+        <Input type="text" id="tags" value={tags} onChange={(event) => setTags(event.target.value)} />
       </div>
         <Spacer y={1} />
       <Button type="submit">Create Blog</Button>
