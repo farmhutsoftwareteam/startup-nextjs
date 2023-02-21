@@ -17,6 +17,7 @@ export default function DashNav() {
                 <Navbar.Link href='#'>Profile</Navbar.Link>
                 <Navbar.Link href='#'>Settings</Navbar.Link>
                 <Navbar.Link href='#'>Help</Navbar.Link>
+                <Navbar.Link href="#!">Logout</Navbar.Link>
             </Navbar.Content>
             <Navbar.Collapse>
                 <Navbar.CollapseItem>Dashboard</Navbar.CollapseItem>
