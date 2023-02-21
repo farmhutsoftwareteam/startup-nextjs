@@ -29,9 +29,9 @@ export default function DashNav() {
             </Navbar.Brand>
             <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline">
                 <Navbar.Link href='#'>Dashboard</Navbar.Link>
-                <Navbar.Link href='#'>Profile</Navbar.Link>
-                <Navbar.Link href='#'>Settings</Navbar.Link>
-                <Navbar.Link href='#'>Help</Navbar.Link>
+                <Navbar.Link href='#'>Events</Navbar.Link>
+                <Navbar.Link href='#'>Production Guides</Navbar.Link>
+                <Navbar.Link href='#'>Online Agronomist</Navbar.Link>
                 <Button onClick={handleLogout} css={{
                     background: "Green",
                 }} >Logout</Button>

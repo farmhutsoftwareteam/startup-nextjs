@@ -10,8 +10,8 @@ const Dashboard = () => {
   return (
     <>
     <DashNav />
-    <div className="p-4">
-    <Spacer y={3} />
+    <div className="p-6">
+    <Spacer y={2} />
     <NavigationLinks />
         <PageShell />
     </div>

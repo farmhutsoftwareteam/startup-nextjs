@@ -16,52 +16,55 @@ import {
     ShoppingCartIcon,
     ArrowNarrowRightIcon,
 } from '@heroicons/react/solid';
+import { useLocation } from '@/hooks/useLocatio';
+import Cookies from 'js-cookie';
 
-const categories = [
-    {
-        title: 'Sales',
-        text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
-        icon: ShoppingBagIcon,
-    },
-    {
-        title: 'Weather',
-        text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
-        icon: CashIcon,
-    },
-    {
-        title: 'Customers',
-        text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
-        icon: UsersIcon,
-    },
-    {
-        title: 'Orders',
-        text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
-        icon: ShoppingCartIcon,
-    },
-];
+
 
 export default function NavigationLinks() {
+    const location = useLocation();
+    Cookies.set('location', location);
+  
     return (
-        <ColGrid numColsSm={ 2 } gapX="gap-x-6" gapY="gap-y-6">
-            { categories.map((item) => (
-                <Card key={ item.title }>
-                    <Icon variant="light" icon={ item.icon } size="lg" color="blue" />
-                    <Title marginTop="mt-6">{ item.title }</Title>
-                    <Text marginTop="mt-2">{ item.text }</Text>
+        <ColGrid numColsSm={ 3 } gapX="gap-x-6" gapY="gap-y-6">
+            
+                <Card >
+                   
+                    <Title marginTop="mt-6">Sales</Title>
+                    <Text marginTop="mt-2">Sales</Text>
                     <Footer>
                         <ButtonInline
                             size="sm"
                             text="View details"
-                            icon={ ArrowNarrowRightIcon }
-                            iconPosition="right"
+                            
                         />
                     </Footer>
                 </Card>
-            )) }
+                <Card >
+                   
+                   <Title marginTop="mt-6">Sales</Title>
+                   <Text marginTop="mt-2">Sales</Text>
+                   <Footer>
+                       <ButtonInline
+                           size="sm"
+                           text="View details"
+                           
+                       />
+                   </Footer>
+               </Card>
+               <Card >
+                   
+                   <Title marginTop="mt-6">Sales</Title>
+                   <Text marginTop="mt-2">Sales</Text>
+                   <Footer>
+                       <ButtonInline
+                           size="sm"
+                           text="View details"
+                           
+                       />
+                   </Footer>
+               </Card>
+             
         </ColGrid>
     );
 }
