@@ -5,7 +5,7 @@ import '@tremor/react/dist/esm/tremor.css'
 
 export function Providers({ children }) {
   return (
-    <ThemeProvider attribute="class" enableSystem="false" defaultTheme="light">
+    <ThemeProvider attribute="class"  defaultTheme="light">
       {children}
     </ThemeProvider>
   );
