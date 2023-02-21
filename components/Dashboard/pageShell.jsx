@@ -14,6 +14,7 @@ import {
 import { useState } from 'react';
 import MarketAnalytics from './marketanalysis';
 import Marketprices from './marketprices';
+import TransValue from './transactionstoday';
 
 export default function PageShell() {
     const [selectedView, setSelectedView] = useState(1);
@@ -39,7 +40,7 @@ export default function PageShell() {
                        
                         <Card>
                             { /* Placeholder to set height */ }
-                 
+                 <TransValue />
                         </Card>
                     </ColGrid>
 

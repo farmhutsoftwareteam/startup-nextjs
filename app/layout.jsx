@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
 
-      <body >
+      <body className="light:bg-white">
         <Providers>
          
           {children}
