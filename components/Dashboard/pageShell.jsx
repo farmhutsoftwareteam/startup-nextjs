@@ -17,12 +17,8 @@ export default function PageShell() {
         <div>
            
 
-            <TabList defaultValue={ 1 } handleSelect={ (value) => setSelectedView(value) } marginTop="mt-6">
-                <Tab value={ 1 } text="Page 1" />
-                <Tab value={ 2 } text="Page 2" />
-            </TabList>
+           
 
-            { selectedView === 1 ? (
                 <>
                     <ColGrid numColsMd={ 2 } numColsLg={ 3 } gapX="gap-x-6" gapY="gap-y-6" marginTop="mt-6">
                         <Card>
@@ -45,13 +41,7 @@ export default function PageShell() {
                         </Card>
                     </Block>
                 </>
-            ) : (
-                <Block marginTop="mt-6">
-                    <Card>
-                        <div className="h-96" />
-                    </Card>
-                </Block>
-            ) }
+          
         </div>
     );
 }

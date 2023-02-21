@@ -3,6 +3,7 @@ import React from "react";
 import { Navbar, Button, Link, Text, Card, Radio, Image } from "@nextui-org/react";
 import Cookies from "js-cookie";
 import ThemeToggler from "../Header/ThemeToggler";
+//we need to add the theme provider from next themes to this component to enable dark mode, omiited it at first because it ws taking time for me to figure out(munyamakosa)
 
 export default function DashNav() {
 
