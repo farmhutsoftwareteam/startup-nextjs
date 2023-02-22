@@ -1,82 +1,84 @@
 "use client"
-import { useState } from 'react';
-import { Card, Text,Input, Textarea, Spacer,Button} from '@nextui-org/react';
 
-const NewBlogForm = () => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [author, setAuthor] = useState('');
-  const [images, setImages] = useState([]);
-  const [date, setDate] = useState('');
-  const [tags, setTags] = useState('');
+import React, { useState } from 'react';
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+const BlogInput = () => {
+    const [title, setTitle] = useState();
+    const [content, setContent ] = useState();
 
-    // Create a new FormData object to store the form data
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('content', content);
-    formData.append('author', author);
-    for (const image of images) {
-      formData.append('images', image);
-    }
-    formData.append('date', date);
-    formData.append('tags', tags);
 
-    // Send the form data to the backend API
-    const response = await fetch('/api/blogs', {
-      method: 'POST',
-      body: formData
-    });
+    return (
+        <>
+        <div className="py-8 bg-white">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div className="max-w-xl mx-auto">
+                    <div>
+                        <label htmlFor="" className="block text-sm font-bold text-gray-900"> Article Title </label>
+                        <div className="mt-2">
+                            <input type="text" name="" id="" placeholder="" value={title} onChange={(e) => setName(e.target.value)} className="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 border rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="py-8 bg-white">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="max-w-xl mx-auto">
+                <div>
+                    <label htmlFor="" className="block text-sm font-medium text-gray-600"> Blog Content </label>
+                    <div className="relative mt-2">
+                        <div className="absolute top-0 left-0 flex items-center pt-4 pl-4 pointer-events-none">
+                            <svg className="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                        </div>
 
-    if (response.ok) {
-      console.log('Blog created successfully');
-    } else {
-      console.error('Error creating blog:', response.statusText);
-    }
-  };
-
-  return (
-    <div className='p-4 bg-black'>
-    <Card>
-    <form onSubmit={handleSubmit}>
-      <div className='p-2' > 
-        <label htmlFor="title">Title:</label>
-        <Input type="text" id="title" value={title} onChange={(event) => setTitle(event.target.value)} />
-      </div>
-      <Spacer y={1} />
-      <div>
-        <label htmlFor="content">Content:</label>
-        <Textarea size="lg" id="content" value={content} onChange={(event) => setContent(event.target.value)} />
-      </div>
-        <Spacer y={1} />
-      <div>
-        <label htmlFor="author">Author:</label>
-        <Input type="text" id="author" value={author} onChange={(event) => setAuthor(event.target.value)} />
-      </div>
-        <Spacer y={1} />
-      <div>
-        <label htmlFor="images">Images:</label>
-        <input type="file" id="images" multiple onChange={(event) => setImages(event.target.files)} />
-      </div>
-        <Spacer y={1} />
-      <div>
-        <label htmlFor="date">Date:</label>
-        <input type="date" id="date" value={date} onChange={(event) => setDate(event.target.value)} />
-      </div>
-        <Spacer y={1} />
-      <div>
-        <label htmlFor="tags">Tags:</label>
-        <Input type="text" id="tags" value={tags} onChange={(event) => setTags(event.target.value)} />
-      </div>
-        <Spacer y={1} />
-      <Button type="submit">Create Blog</Button>
-    </form>
-    </Card>
+                        <textarea name="" id="" placeholder="Enter your content" value={content} rows="15" className="border block w-full py-3 pl-12 pr-4 placeholder-gray-500 border-gray-300 rounded-lg resize-y focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" onChange={(e) => setText(e.target.value)}></textarea>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </div>
-  );
-};
+    <div className="py-8 bg-white">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div className="max-w-xl mx-auto">
+                    <div>
+                        <label htmlFor="" className="block text-sm font-bold text-gray-900"> Author </label>
+                        <div className="mt-2">
+                            <input type="text" name="" id="" placeholder="" value={title} onChange={(e) => setName(e.target.value)} className="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 border rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="py-8 bg-white">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div className="max-w-xl mx-auto">
+                    <div>
+                        <label htmlFor="" className="block text-sm font-bold text-gray-900"> Occupation </label>
+                        <div className="mt-2">
+                            <input type="text" name="" id="" placeholder="" value={title} onChange={(e) => setName(e.target.value)} className="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 border rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="py-8 bg-white">
+            <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div className="max-w-xl mx-auto">
+                    <div className="sm:flex sm:items-center sm:space-x-8">
+                        <label htmlFor="" className="block text-sm font-bold text-gray-900"> Upload Images: </label>
+                        <div className="relative mt-2 sm:mt-0 sm:flex-1">
+                            <input type="file" className="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </>
+    );
+}
 
-
-export default NewBlogForm;
+export default BlogInput;
